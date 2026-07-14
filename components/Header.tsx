@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const navItems = ["Services", "Technologies", "Industries", "Solutions", "Clients", "About us", "Insights"];
 
@@ -18,7 +18,7 @@ const MegaMenu = () => {
   ];
 
   return (
-    <div className="absolute left-0 top-[80px] hidden w-full bg-[#111111] px-5 pb-16 pt-10 sm:px-10 lg:px-14 group-hover/navitem:block border-t border-[#333] shadow-2xl">
+    <div className="absolute left-0 top-[80px] hidden w-full bg-[#111111] px-5 pb-16 pt-10 sm:px-10 lg:px-14 group-hover/navitem:block border-y border-[#333] shadow-2xl">
       <div className="mx-auto flex w-full max-w-[1100px] gap-16 text-white">
         {/* First Column */}
         <div className="w-[320px] border-r border-[#333] pr-8">
@@ -72,7 +72,7 @@ const MegaMenu = () => {
                   "QA Testing & Automation", "SaaS Development",
                   "UX/UI Design", "Web Development"
                 ].map(item => (
-                  <a key={item} href="#" className="group/link relative inline-block w-fit text-[15px] font-medium text-gray-300 transition hover:text-white">
+                  <a key={item} href="#" className="group/link relative inline-block w-fit text-[16px] font-medium text-gray-300 transition hover:text-white">
                     {item}
                     <span className="absolute -bottom-1 left-0 h-[1px] w-0 bg-white transition-all duration-300 group-hover/link:w-full"></span>
                   </a>
@@ -96,7 +96,7 @@ const MegaMenu = () => {
                   "Digital Transformation", "ERP Development"
                 ].map(item => (
                   <li key={item}>
-                    <a href="#" className="group/link relative inline-block text-[15px] font-medium text-gray-300 transition hover:text-white">
+                    <a href="#" className="group/link relative inline-block text-[16px] font-medium text-gray-300 transition hover:text-white">
                       {item}
                       <span className="absolute -bottom-1 left-0 h-[1px] w-0 bg-white transition-all duration-300 group-hover/link:w-full"></span>
                     </a>
@@ -117,7 +117,7 @@ const MegaMenu = () => {
                   "API Development"
                 ].map(item => (
                   <li key={item}>
-                    <a href="#" className="group/link relative inline-block text-[15px] font-medium text-gray-300 transition hover:text-white">
+                    <a href="#" className="group/link relative inline-block text-[16px] font-medium text-gray-300 transition hover:text-white">
                       {item}
                       <span className="absolute -bottom-1 left-0 h-[1px] w-0 bg-white transition-all duration-300 group-hover/link:w-full"></span>
                     </a>
@@ -139,7 +139,7 @@ const MegaMenu = () => {
                   "React Native", "Flutter",
                   "Kotlin Multiplatform"
                 ].map(item => (
-                  <a key={item} href="#" className="group/link relative inline-block w-fit text-[15px] font-medium text-gray-300 transition hover:text-white">
+                  <a key={item} href="#" className="group/link relative inline-block w-fit text-[16px] font-medium text-gray-300 transition hover:text-white">
                     {item}
                     <span className="absolute -bottom-1 left-0 h-[1px] w-0 bg-white transition-all duration-300 group-hover/link:w-full"></span>
                   </a>
@@ -159,7 +159,7 @@ const MegaMenu = () => {
                   "UX Research", "Illustrations"
                 ].map(item => (
                   <li key={item}>
-                    <a href="#" className="group/link relative inline-block text-[15px] font-medium text-gray-300 transition hover:text-white">
+                    <a href="#" className="group/link relative inline-block text-[16px] font-medium text-gray-300 transition hover:text-white">
                       {item}
                       <span className="absolute -bottom-1 left-0 h-[1px] w-0 bg-white transition-all duration-300 group-hover/link:w-full"></span>
                     </a>
@@ -176,7 +176,7 @@ const MegaMenu = () => {
                   "Figma", "Accessibility (WCAG)", "Motion Design"
                 ].map(item => (
                   <li key={item}>
-                    <a href="#" className="group/link relative inline-block text-[15px] font-medium text-gray-300 transition hover:text-white">
+                    <a href="#" className="group/link relative inline-block text-[16px] font-medium text-gray-300 transition hover:text-white">
                       {item}
                       <span className="absolute -bottom-1 left-0 h-[1px] w-0 bg-white transition-all duration-300 group-hover/link:w-full"></span>
                     </a>
@@ -197,7 +197,7 @@ const MegaMenu = () => {
                   "Machine Learning", "Data Engineering"
                 ].map(item => (
                   <li key={item}>
-                    <a href="#" className="group/link relative inline-block text-[15px] font-medium text-gray-300 transition hover:text-white">
+                    <a href="#" className="group/link relative inline-block text-[16px] font-medium text-gray-300 transition hover:text-white">
                       {item}
                       <span className="absolute -bottom-1 left-0 h-[1px] w-0 bg-white transition-all duration-300 group-hover/link:w-full"></span>
                     </a>
@@ -219,7 +219,7 @@ const MegaMenu = () => {
                   "Software Maintenance"
                 ].map(item => (
                   <li key={item}>
-                    <a href="#" className="group/link relative inline-block text-[15px] font-medium text-gray-300 transition hover:text-white">
+                    <a href="#" className="group/link relative inline-block text-[16px] font-medium text-gray-300 transition hover:text-white">
                       {item}
                       <span className="absolute -bottom-1 left-0 h-[1px] w-0 bg-white transition-all duration-300 group-hover/link:w-full"></span>
                     </a>
@@ -237,7 +237,7 @@ const MegaMenu = () => {
                   "Delivery Center"
                 ].map(item => (
                   <li key={item}>
-                    <a href="#" className="group/link relative inline-block text-[15px] font-medium text-gray-300 transition hover:text-white">
+                    <a href="#" className="group/link relative inline-block text-[16px] font-medium text-gray-300 transition hover:text-white">
                       {item}
                       <span className="absolute -bottom-1 left-0 h-[1px] w-0 bg-white transition-all duration-300 group-hover/link:w-full"></span>
                     </a>
@@ -254,7 +254,7 @@ const MegaMenu = () => {
               <ul className="flex flex-col space-y-5">
                 {["Digital Product Strategy", "Product Discovery & Research", "Rapid Prototyping", "Technology Strategy", "Innovation & R&D"].map(item => (
                   <li key={item}>
-                    <a href="#" className="group/link relative inline-block text-[15px] font-medium text-gray-300 transition hover:text-white">
+                    <a href="#" className="group/link relative inline-block text-[16px] font-medium text-gray-300 transition hover:text-white">
                       {item}
                       <span className="absolute -bottom-1 left-0 h-[1px] w-0 bg-white transition-all duration-300 group-hover/link:w-full"></span>
                     </a>
@@ -268,7 +268,7 @@ const MegaMenu = () => {
               <ul className="flex flex-col space-y-5">
                 {["Design Thinking", "Lean Product Development", "Product Analytics", "Experimentation Platforms"].map(item => (
                   <li key={item}>
-                    <a href="#" className="group/link relative inline-block text-[15px] font-medium text-gray-300 transition hover:text-white">
+                    <a href="#" className="group/link relative inline-block text-[16px] font-medium text-gray-300 transition hover:text-white">
                       {item}
                       <span className="absolute -bottom-1 left-0 h-[1px] w-0 bg-white transition-all duration-300 group-hover/link:w-full"></span>
                     </a>
@@ -285,7 +285,7 @@ const MegaMenu = () => {
 
 const TechnologiesMegaMenu = () => {
   return (
-    <div className="absolute left-0 top-[80px] hidden w-full bg-[#111111] px-5 pb-16 pt-10 sm:px-10 lg:px-14 group-hover/navitem:block border-t border-[#333] shadow-2xl">
+    <div className="absolute left-0 top-[80px] hidden w-full bg-[#111111] px-5 pb-16 pt-10 sm:px-10 lg:px-14 group-hover/navitem:block border-y border-[#333] shadow-2xl">
       <div className="mx-auto flex w-full max-w-[1100px] gap-16 text-white">
         {/* First Column */}
         <div className="w-[320px] border-r border-[#333] pr-10 flex flex-col">
@@ -327,7 +327,7 @@ const TechnologiesMegaMenu = () => {
               "React", "Ruby", "Salesforce",
               "TypeScript", "Vue.js", "Xamarin"
             ].map(item => (
-              <a key={item} href="#" className="group/link relative inline-block w-fit text-[15px] font-medium text-gray-300 transition hover:text-white">
+              <a key={item} href="#" className="group/link relative inline-block w-fit text-[16px] font-medium text-gray-300 transition hover:text-white">
                 {item}
                 <span className="absolute -bottom-1 left-0 h-[1px] w-0 bg-white transition-all duration-300 group-hover/link:w-full"></span>
               </a>
@@ -348,7 +348,7 @@ const TechnologiesMegaMenu = () => {
 
 const IndustriesMegaMenu = () => {
   return (
-    <div className="absolute left-0 top-[80px] hidden w-full bg-[#111111] px-5 pb-16 pt-10 sm:px-10 lg:px-14 group-hover/navitem:block border-t border-[#333] shadow-2xl">
+    <div className="absolute left-0 top-[80px] hidden w-full bg-[#111111] px-5 pb-16 pt-10 sm:px-10 lg:px-14 group-hover/navitem:block border-y border-[#333] shadow-2xl">
       <div className="mx-auto flex w-full max-w-[1100px] gap-16 text-white">
         {/* First Column */}
         <div className="w-[320px] border-r border-[#333] pr-10 flex flex-col">
@@ -386,7 +386,7 @@ const IndustriesMegaMenu = () => {
               "Real Estate", "Retail", "Supply Chain",
               "Telecommunications", "Transportation and Logistics", "Travel and Hospitality"
             ].map(item => (
-              <a key={item} href="#" className="group/link relative inline-block w-fit text-[15px] font-medium text-gray-300 transition hover:text-white">
+              <a key={item} href="#" className="group/link relative inline-block w-fit text-[16px] font-medium text-gray-300 transition hover:text-white">
                 {item}
                 <span className="absolute -bottom-1 left-0 h-[1px] w-0 bg-white transition-all duration-300 group-hover/link:w-full"></span>
               </a>
@@ -407,7 +407,7 @@ const IndustriesMegaMenu = () => {
 
 const SolutionsMegaMenu = () => {
   return (
-    <div className="absolute left-0 top-[80px] hidden w-full bg-[#111111] px-5 pb-16 pt-10 sm:px-10 lg:px-14 group-hover/navitem:block border-t border-[#333] shadow-2xl">
+    <div className="absolute left-0 top-[80px] hidden w-full bg-[#111111] px-5 pb-16 pt-10 sm:px-10 lg:px-14 group-hover/navitem:block border-y border-[#333] shadow-2xl">
       <div className="mx-auto flex w-full max-w-[1100px] gap-20 text-white">
 
         {/* Left Section - For Commerce */}
@@ -439,7 +439,7 @@ const SolutionsMegaMenu = () => {
           <ul className="flex flex-col space-y-4">
             {["Finance and banking", "Healthcare and life science", "Education", "Proptech"].map((item) => (
               <li key={item}>
-                <a href="#" className="group/link relative inline-block text-[15px] font-medium text-gray-300 transition hover:text-white">
+                <a href="#" className="group/link relative inline-block text-[16px] font-medium text-gray-300 transition hover:text-white">
                   {item}
                   <span className="absolute -bottom-1 left-0 h-[1px] w-0 bg-white transition-all duration-300 group-hover/link:w-full"></span>
                 </a>
@@ -454,7 +454,7 @@ const SolutionsMegaMenu = () => {
 
 const ClientsMegaMenu = () => {
   return (
-    <div className="absolute left-0 top-[80px] hidden w-full bg-[#111111] px-5 pb-16 pt-10 sm:px-10 lg:px-14 group-hover/navitem:block border-t border-[#333] shadow-2xl">
+    <div className="absolute left-0 top-[80px] hidden w-full bg-[#111111] px-5 pb-16 pt-10 sm:px-10 lg:px-14 group-hover/navitem:block border-y border-[#333] shadow-2xl">
       <div className="mx-auto flex w-full max-w-[1100px] gap-20 text-white">
 
         {/* Left Section - Case Studies */}
@@ -523,7 +523,7 @@ const ClientsMegaMenu = () => {
 
 const AboutMegaMenu = () => {
   return (
-    <div className="absolute left-0 top-[80px] hidden w-full bg-[#111111] px-5 pb-16 pt-10 sm:px-10 lg:px-14 group-hover/navitem:block border-t border-[#333] shadow-2xl">
+    <div className="absolute left-0 top-[80px] hidden w-full bg-[#111111] px-5 pb-16 pt-10 sm:px-10 lg:px-14 group-hover/navitem:block border-y border-[#333] shadow-2xl">
       <div className="mx-auto flex w-full max-w-[1100px] gap-16 text-white">
         {/* First Column */}
         <div className="w-[320px] border-r border-[#333] pr-10 flex flex-col">
@@ -536,7 +536,7 @@ const AboutMegaMenu = () => {
 
           <div className="flex flex-col w-full">
              <img 
-               src="https://res.cloudinary.com/djhuduvrr/image/upload/v1783789022/ChatGPT_Image_Jul_11_2026_10_26_07_PM_dccs8l.png" 
+               src="https://res.cloudinary.com/djhuduvrr/image/upload/v1784024533/ChatGPT_Image_Jul_14_2026_03_10_40_PM_adosxq.png" 
                alt="About us feature" 
                className="h-[48px] w-auto object-contain object-left mb-3"
              />
@@ -568,7 +568,7 @@ const AboutMegaMenu = () => {
                   "FAQs"
                 ].map(item => (
                   <li key={item}>
-                    <a href="#" className="group/link relative inline-block text-[14px] font-medium text-gray-300 transition hover:text-white">
+                    <a href="#" className="group/link relative inline-block text-[16px] font-medium text-gray-300 transition hover:text-white">
                       {item}
                       <span className="absolute -bottom-1 left-0 h-[1px] w-0 bg-white transition-all duration-300 group-hover/link:w-full"></span>
                     </a>
@@ -593,7 +593,7 @@ const AboutMegaMenu = () => {
                   "Certifications"
                 ].map(item => (
                   <li key={item}>
-                    <a href="#" className="group/link relative inline-block text-[14px] font-medium text-gray-300 transition hover:text-white">
+                    <a href="#" className="group/link relative inline-block text-[16px] font-medium text-gray-300 transition hover:text-white">
                       {item}
                       <span className="absolute -bottom-1 left-0 h-[1px] w-0 bg-white transition-all duration-300 group-hover/link:w-full"></span>
                     </a>
@@ -616,7 +616,7 @@ const AboutMegaMenu = () => {
                   "Company Culture"
                 ].map(item => (
                   <li key={item}>
-                    <a href="#" className="group/link relative inline-block text-[14px] font-medium text-gray-300 transition hover:text-white">
+                    <a href="#" className="group/link relative inline-block text-[16px] font-medium text-gray-300 transition hover:text-white">
                       {item}
                       <span className="absolute -bottom-1 left-0 h-[1px] w-0 bg-white transition-all duration-300 group-hover/link:w-full"></span>
                     </a>
@@ -633,7 +633,7 @@ const AboutMegaMenu = () => {
 };
 const InsightsMegaMenu = () => {
   return (
-    <div className="absolute left-0 top-[80px] hidden w-full bg-[#111111] px-5 pb-16 pt-10 sm:px-10 lg:px-14 group-hover/navitem:block border-t border-[#333] shadow-2xl">
+    <div className="absolute left-0 top-[80px] hidden w-full bg-[#111111] px-5 pb-16 pt-10 sm:px-10 lg:px-14 group-hover/navitem:block border-y border-[#333] shadow-2xl">
       <div className="mx-auto flex w-full max-w-[1100px] text-white">
 
         {/* Left Section - BLOG */}
@@ -708,19 +708,67 @@ const InsightsMegaMenu = () => {
   );
 };
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const scrollDownStartRef = useRef(0);
+  const isScrollingDownRef = useRef(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const threshold = window.innerHeight * 0.7; // 70% of the hero section height
+      
+      if (currentScrollY < threshold) {
+        setIsScrolled(false);
+        setIsHidden(false);
+        isScrollingDownRef.current = false;
+      } else {
+        setIsScrolled(true);
+        
+        if (currentScrollY > lastScrollY) {
+          // scrolling down
+          if (!isScrollingDownRef.current) {
+            isScrollingDownRef.current = true;
+            scrollDownStartRef.current = currentScrollY;
+          }
+          
+          // Hide header only after scrolling down 400px (roughly 70% of a row)
+          if (currentScrollY - scrollDownStartRef.current > 400) {
+            setIsHidden(true);
+          }
+        } else {
+          // scrolling up
+          setIsHidden(false);
+          isScrollingDownRef.current = false;
+        }
+      }
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <header className="group absolute left-0 right-0 top-0 z-10 w-full transition-colors duration-300 hover:bg-[#111111]">
+    <header 
+      className={`group fixed left-0 right-0 top-0 z-[100] w-full transition-all duration-300 hover:bg-[#111111] ${
+        isHidden ? '-translate-y-full' : 'translate-y-0'
+      } ${
+        isScrolled ? 'bg-[#111111]' : 'bg-transparent'
+      }`}
+    >
       <div className="mx-auto flex h-[80px] w-full max-w-[1770px] items-center justify-between px-5 sm:px-10 lg:px-14">
-        <a className="flex shrink-0 items-center gap-3" href="#" aria-label="Netguru home">
+        <a className="flex shrink-0 items-center gap-3 lg:ml-12 xl:ml-20" href="#" aria-label="Netguru home">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[#00e56a]">
             <path d="M5 20V4L19 20V4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
           <span className="text-[24px] font-medium tracking-tight">Agency</span>
         </a>
 
-        <nav className="hidden h-full items-center gap-10 text-[16px] font-semibold lg:flex">
+        <nav className="hidden h-full items-center text-[16px] font-semibold lg:flex">
           {navItems.map((item) => (
-            <div key={item} className="group/navitem flex h-full items-center">
+            <div key={item} className="group/navitem flex h-full items-center px-5">
               <a className="relative flex h-full items-center transition hover:text-white" href="#">
                 <span className="group-hover/navitem:underline group-hover/navitem:underline-offset-[6px] group-hover/navitem:decoration-white decoration-2">{item}</span>
                 <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#00e56a] transition-all duration-300 group-hover/navitem:w-full"></span>
@@ -736,9 +784,13 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center h-full">
+        <div className="flex items-center h-full lg:mr-12 xl:mr-20">
           <a
-            className="flex items-center gap-2 border border-white px-6 py-2.5 text-[15px] font-semibold text-white transition-all duration-300 group-hover:border-[#00e56a] group-hover:bg-[#00e56a] group-hover:text-black hover:!bg-[#00c85c] hover:!border-[#00c85c]"
+            className={`flex items-center gap-2 border px-6 py-2.5 text-[15px] font-semibold transition-all duration-300 hover:bg-[#00e56a] hover:border-[#00e56a] hover:text-black ${
+              isScrolled 
+                ? 'bg-[#00e56a] border-[#00e56a] text-black' 
+                : 'bg-transparent border-white text-white'
+            }`}
             href="#"
           >
             Get in touch
