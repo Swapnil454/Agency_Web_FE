@@ -9,7 +9,9 @@ import TeamSection from './TeamSection';
 import CaseStudiesSection from './CaseStudiesSection';
 import AIAugmentedSection from './AIAugmentedSection';
 import ToolsTechnologiesSection from './ToolsTechnologiesSection';
-
+import ClientTestimonialsSection from './ClientTestimonialsSection';
+import EngagementModelsSection from './EngagementModelsSection';
+import AIFaqSection from './AIFaqSection';
 export default function AIDevelopmentPage() {
   return (
     <main className="text-white bg-[#111111] min-h-screen font-sans">
@@ -174,6 +176,11 @@ export default function AIDevelopmentPage() {
       <CaseStudiesSection />
       <AIAugmentedSection />
       <ToolsTechnologiesSection />
+      <ClientTestimonialsSection />
+      <EngagementModelsSection />
+
+      {/* AI FAQ Section */}
+      <AIFaqSection />
 
       <Footer />
     </main>
