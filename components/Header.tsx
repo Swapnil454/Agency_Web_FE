@@ -72,7 +72,7 @@ const MegaMenu = () => {
                   "QA Testing & Automation", "SaaS Development",
                   "UX/UI Design", "Web Development"
                 ].map(item => (
-                  <a key={item} href="#" className="group/link relative inline-block w-fit text-[16px] font-medium text-gray-300 transition hover:text-white">
+                  <a key={item} href={item === "AI Development" ? "/technologies/AI-Development" : "#"} className="group/link relative inline-block w-fit text-[16px] font-medium text-gray-300 transition hover:text-white">
                     {item}
                     <span className="absolute -bottom-1 left-0 h-[1px] w-0 bg-white transition-all duration-300 group-hover/link:w-full"></span>
                   </a>
@@ -327,7 +327,7 @@ const TechnologiesMegaMenu = () => {
               "React", "Ruby", "Salesforce",
               "TypeScript", "Vue.js", "Xamarin"
             ].map(item => (
-              <a key={item} href="#" className="group/link relative inline-block w-fit text-[16px] font-medium text-gray-300 transition hover:text-white">
+              <a key={item} href={item === "AI" ? "/technologies/AI-Development" : "#"} className="group/link relative inline-block w-fit text-[16px] font-medium text-gray-300 transition hover:text-white">
                 {item}
                 <span className="absolute -bottom-1 left-0 h-[1px] w-0 bg-white transition-all duration-300 group-hover/link:w-full"></span>
               </a>

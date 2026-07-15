@@ -92,7 +92,7 @@ export default function Footer() {
           {/* Recognized by */}
           <div className="flex-1">
             <h3 className="text-[15px] text-white mb-6">Client Success:</h3>
-            <div className="flex flex-wrap items-center gap-x-10 gap-y-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-6">
               <div className="flex items-center gap-2.5">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00FF88" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 <span className="text-white font-bold text-[17px] tracking-tight">98% Client Retention</span>
@@ -131,19 +131,19 @@ export default function Footer() {
             <h3 className="text-[15px] text-white mb-6 ">Key Achievements:</h3>
             <div className="grid grid-cols-2 gap-x-6 gap-y-6">
               <div>
-                <div className="text-[#00FF88] font-black text-[24px] leading-none mb-1">500+</div>
+                <div className="text-[#ffffff] font-black text-[24px] leading-none mb-1">500+</div>
                 <div className="text-white font-medium text-[13px] leading-tight">npm Downloads</div>
               </div>
               <div>
-                <div className="text-[#00FF88] font-black text-[24px] leading-none mb-1">2M+</div>
+                <div className="text-[#ffffff] font-black text-[24px] leading-none mb-1">2M+</div>
                 <div className="text-white font-medium text-[13px] leading-tight">Lines of Production Code</div>
               </div>
               <div>
-                <div className="text-[#00FF88] font-black text-[24px] leading-none mb-1">99.9%</div>
+                <div className="text-[#ffffff] font-black text-[24px] leading-none mb-1">99.9%</div>
                 <div className="text-white font-medium text-[13px] leading-tight">Service Availability</div>
               </div>
               <div>
-                <div className="text-[#00FF88] font-black text-[24px] leading-none mb-1">100%</div>
+                <div className="text-[#ffffff] font-black text-[24px] leading-none mb-1">100%</div>
                 <div className="text-white font-medium text-[13px] leading-tight">Client Satisfaction</div>
               </div>
             </div>
@@ -168,8 +168,8 @@ export default function Footer() {
             ©2026 Agency S.A. All rights reserved.
           </div>
           <div className="flex items-center gap-6">
-            <a href="/privacy-policy" className="hover:text-gray-300 transition-colors">Privacy & Cookie Policy</a>
-            <a href="#" className="hover:text-gray-300 transition-colors">Terms of use</a>
+            <a href="/legal/privacy-policy" className="hover:text-gray-300 transition-colors">Privacy & Cookie Policy</a>
+            <a href="/legal/refund-cancellation" className="hover:text-gray-300 transition-colors">Refund & Cancellation Policy</a>
             <a href="#" className="hover:text-gray-300 transition-colors">Sitemap</a>
           </div>
         </div>
