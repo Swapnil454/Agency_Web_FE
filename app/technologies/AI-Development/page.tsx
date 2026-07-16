@@ -12,6 +12,8 @@ import ToolsTechnologiesSection from './ToolsTechnologiesSection';
 import ClientTestimonialsSection from './ClientTestimonialsSection';
 import EngagementModelsSection from './EngagementModelsSection';
 import AIFaqSection from './AIFaqSection';
+import AIResourcesSection from './AIResourcesSection';
+import AITrustBanner from './AITrustBanner';
 export default function AIDevelopmentPage() {
   return (
     <main className="text-white bg-[#111111] min-h-screen font-sans">
@@ -181,6 +183,12 @@ export default function AIDevelopmentPage() {
 
       {/* AI FAQ Section */}
       <AIFaqSection />
+
+      {/* Useful AI Resources Section */}
+      <AIResourcesSection />
+
+      {/* Trust Banner Strip */}
+      <AITrustBanner />
 
       <Footer />
     </main>

@@ -58,7 +58,7 @@ export default function AIFaqSection() {
         
         {/* Header */}
         <div className="w-full mb-16 lg:mb-20">
-          <h3 className="text-[12px] font-bold uppercase tracking-[0.2em] text-[#00e56a] mb-6">
+          <h3 className="text-[12px] font-bold uppercase tracking-[0.2em] text-[#ffffff] mb-6">
             AI FAQ
           </h3>
           <h2 className="text-[36px] sm:text-[44px] md:text-[52px] font-bold leading-[1.1] tracking-tight text-white">
@@ -81,7 +81,7 @@ export default function AIFaqSection() {
                       onClick={() => toggleFaq(index)}
                       className="w-full py-6 sm:py-8 flex items-start sm:items-center justify-between gap-6 text-left group"
                     >
-                      <span className="text-[18px] sm:text-[20px] font-medium text-white group-hover:text-[#00e56a] transition-colors pr-6">
+                      <span className="text-[18px] sm:text-[20px] font-medium text-white  transition-colors pr-6">
                         {faq.question}
                       </span>
                       <div 
